@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    font-family: 'Cinzel'; src: url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap'); 
+    font-family: 'Chelsea Maket'; src: url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Cinzel:wght@400..900&display=swap');
+  }
+  
+  
+  html, body, footer{ /* Apaga todas as margens */ 
+    margin: 0;
+    background-color: antiquewhite;
+  }
+  
+  
+  .menu{ /* Config. da barra de navegação */ 
+    background-color: #4F1D0E;
+    text-align: center;
+    padding: 1px 2px;
+    font-size: 20px;
+  
+  }
+  .menu-item {
+    color: white; 
+    text-decoration: none;
+    margin-right: 30px; 
+  }
+  
+  .menu-item:hover {
+    color: #F2ADA7; 
+  }
+      
+  /* ESTILIZAÇÃO DA LOJA */
+  
+  .titulo{
+    padding: 15px; /*Tamanho do bloco */
+    font-family: "Playfair Display";
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;/* Espessura da fonte */ 
+    font-weight: 100;
+    color: #4F1D0E;
+    margin-top: 5px; /* Margem superior */
+    margin-bottom: 5px; /* Margem inferior */
+  }
+  
+  .cardapio {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Cinzel";
+  }
+    
+  .cardapio-tortas {
+    background-color: #F2ADA7;
+    border-radius: 5px; /*Arredonda as bordas*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*sombra*/
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+  }
+    
+  .cardapio-tortas img {
+    max-width: 100%;
+    border-radius: 7px
+  }
+  
+  /* DOCES */
+  .cardapio-doces {
+    background-color: #F2ADA7;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .cardapio-doces img {
+    max-width: 100%;
+    border-radius: 5px
+  }
+  
+  /* CONFIG. BOTÕES */
+  button{
+    background-color:#4F1D0E; /* Cor de fundo */
+    border: none; /* Remover borda */
+    color: white; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remover sublinhado */
+    display: inline-block; /* Exibir como bloco */
+    font-size: 12px; /* Tamanho da fonte */
+    margin: 10px; /* Margem externa */
+    cursor: pointer; /* Cursor */
+    border-radius: 30px; /* Borda arredondada */
+  }   
+  
+  button:hover { /* Mudar cor ao passar o mouse */
+  background-color:#0C5700;
+  color: white;   
+  
+}

@@ -9,7 +9,7 @@ html, body, footer{ /* Apaga todas as margens */ margin: 0;
    background-color: antiquewhite;
 }
 
-.menu{ /* Config. da barra de navegação */ 
+.menu{ /* CONFIG. MENU DE NAVEGAÇÃO */ 
     background-color: #4F1D0E;
     text-align: center;
     padding: 1px 2px;
@@ -31,7 +31,7 @@ html, body, footer{ /* Apaga todas as margens */ margin: 0;
     justify-content: space-between;
 }
 
-/* CONFIG DOS BLOCOS */
+/* CONFIGURAÇÃO DOS BLOCOS */
 .informacoes{
     padding: 50px;
     height: 300px;
@@ -40,20 +40,17 @@ html, body, footer{ /* Apaga todas as margens */ margin: 0;
 
 }
 
-h2{
+h2{  /* CTA */
+
     font-family:"Playfair Display", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
 }
 
-.redes-sociais {
+.redes-sociais, .redes-sociais a {
     margin-top: 10px;
-    text-align: center;
+    text-align:left;
 }
 
-.redes-sociais a {
-    margin-right: 10px;
-    
-}
 
 
 .fale-conosco{
@@ -62,16 +59,16 @@ h2{
     width: 75%;
 }
 
-form { /* Fomatação retangular do formulário */
-    background-color: #fff;
-    padding: 20px;
+form { /* FORMATAÇÃO RETANGULAR DOS BLOCOS */
+    background-color: #F2ADA7;
+    padding: 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*sombra*/
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
 }
 
-label {
+label { /* FORMATAÇÃO DO BLOCO DE PREENCHIMENTO */
     display: block;
     margin-bottom: 5px;
 }
@@ -80,27 +77,29 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-    width: calc(100% - 12px); /* tamanho da barra de preenchmento */
-    padding: 5px;
+    width: calc(100% - 12px); /* TAMANHO DA BARRA */
+    padding: 10px 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 20px;
+    background-color:#FDF3E7;
 }
 
 textarea {
-    height: 50px; /*tamnaho da caixa de mensagem*/
+    height: 50px; /*TAMANHO DA CAIXA DE MENSAGEM*/
 }
 
-button[type="submit"] {
-    background-color: blue;
+button[type="submit"] { /* CONFIGURAÇÃO DO BOTÃO ENVIAR */
+
+    background-color: #4F1D0E;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 3px;
+    border-radius: 20px;
     cursor: pointer;
-    
+ 
 }
 
-button[type="submit"]:hover {
-    background-color: #F2ADA7;
+button[type="submit"]:hover { 
+    background-color: green;
 }

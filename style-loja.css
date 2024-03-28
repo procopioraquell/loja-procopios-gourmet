@@ -16,7 +16,7 @@
     background-color: #4F1D0E;
     text-align: center;
     padding: 1px 2px;
-    font-size: 20px;
+    font-size: 25px;
   
   }
   .menu-item {
@@ -39,7 +39,7 @@
     font-style: normal;/* Espessura da fonte */ 
     font-weight: 100;
     color: #4F1D0E;
-    margin-top: 5px; /* Margem superior */
+    margin-top: 1px; /* Margem superior */
     margin-bottom: 5px; /* Margem inferior */
   }
   
@@ -100,6 +100,11 @@
   
   button:hover { /* Mudar cor ao passar o mouse */
   background-color:#0C5700;
-  color: white;   
-  
+  color: white;    
+}
+
+footer {
+  background-color: #4F1D0E;
+  padding: 1PX;
+  text-align: center;
 }

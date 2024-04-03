@@ -1,5 +1,5 @@
 Bem-vindo à Doceria Procopios Gourmet!
- Loja Virtual para Procopios Gourmet
+
 Este é o  meu primeiro projeto, desenvolvido utilizando HTML e CSS. A proposta deste site é criar uma loja virtual destinada à compra e solicitação de orçamentos para a doceria Procopios Gourmet.
 
 Sobre Nós

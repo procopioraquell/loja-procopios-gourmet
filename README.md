@@ -1,6 +1,6 @@
 Bem-vindo à Doceria Procopios Gourmet!
 
-Este é o  meu primeiro projeto, desenvolvido utilizando HTML e CSS. A proposta deste site é criar uma loja virtual destinada à compra e solicitação de orçamentos para a doceria Procopios Gourmet.
+Este é o  meu primeiro projeto desenvolvido utilizando HTML e CSS. A proposta deste site é criar uma loja virtual destinada à compra e solicitação de orçamentos para a doceria Procopios Gourmet.
 
 Sobre Nós
 A Doceria Procopios Gourmet é especializada em produzir bolos caseiros, doces refinados e sobremesas para os nossos clientes. Nosso compromisso é oferecer produtos de alta qualidade, feitos com os melhores ingredientes e com muito carinho.

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Procopios Gourmet</title>
+    <meta
+      name="description"
+      content="Confeitaria com bolos de festas, doces em geral em Duque de Caxias."
+    />
+    <link rel="stylesheet" href="style-loja.css" />
+  </head>
+
+  <header>
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <nav class="menu">
+      <ul>
+        <a class="menu-item" href="index.html"> Inicio </a>
+        <a class="menu-item-atual" href="loja.html"> Loja </a>
+        <a class="menu-item" href="contato.html"> Contato </a>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <!--BOTÕES DO CARDÁPIO-->
+    <div id="cardapio" class="cardapio">
+        <section class="selecao_loja">
+            <div class="categoria">
+            <button class="categoria-btn" tipo-categoria="bolos">
+                <img src="/imagens/loja/bolo1.jpg" alt="Bolos">
+            </button>
+            <p>Bolos</p>
+            </div>
+            <div class="categoria">
+            <button class="categoria-btn" tipo-categoria="sobremesas">
+                <img src="imagens/loja/sobremesa.png" alt="Sobremesas">
+            </button>
+            <p>Sobremesas</p>
+            </div>
+            <div class="categoria">
+            <button class="categoria-btn" tipo-categoria="salgados">
+                <img src="imagens/loja/salgados.png" alt="Salgados">
+            </button>
+            <p>Salgados</p>
+            </div>
+            <div class="categoria">
+            <button class="categoria-btn" tipo-categoria="doces festa">
+                <img src="imagens/loja/docinho.jpg" alt="Doces para Festa">
+            </button>
+            <p>Doces para Festa</p>
+            </div>
+            <div class="categoria">
+                <button class="categoria-btn" tipo-categoria="todos">
+                    <img src="imagens/loja/docinho.jpg" alt="Todos os Produtos">
+                </button>
+                <p>Todos os Produtos</p>
+            </div>
+        </section>
+    </div>
+    <!-- Linha de divisão -->
+    <div class="linha-divisao"></div>
+     <!-- Mensagem de boas-vindas -->
+     <div class="mensagem-bem-vindo" id="mensagem-bem-vindo">
+        <h2>Bem-vindo à Procopios Gourmet!</h2>
+        <p>Escolha uma categoria para começar a explorar nossos produtos deliciosos.</p>
+        <img src="imagens/loja/destaque.jpg" alt="Destaque" width="300px" /> <!-- Exemplo de imagem de destaque -->
+    </div>
+
+
+    <!-- Div para exibir produtos filtrados -->
+    <div class="produtos-filtrados" id="produtos-filtrados"></div>
+</div>
+        
+    </body>
+
+    <footer>
+        <!--RODAPÉ-->
+        <div class="logo">
+        <img src="imagens/LOGO _ RODAPE.png" . width="100px" />
+        </div>
+    </footer>
+
+    <script src="produtos.js"></script>
+    
+    <script> 
+   function exibirProdutos(tipo) { //Exibi os produtos
+    const produtosFiltrados = tipo === 'todos' 
+        ? produtos // Exibe todos os produtos se a categoria for "todos"
+        : produtos.filter(produto => produto.tipo === tipo);
+
+    const produtosDiv = document.getElementById('produtos-filtrados');
+    produtosDiv.innerHTML = ''; // Limpa os produtos exibidos anteriormente
+
+    produtosFiltrados.forEach(produto => {
+        const produtoDiv = document.createElement('div');
+        produtoDiv.classList.add('cardapio-itens');
+        produtoDiv.innerHTML = `
+            <img src="${produto.imagem}" width="200px">
+            <h2>${produto.nome}</h2>
+            <p>R$ ${produto.preco.toFixed(2)}</p>
+            <button>Adicionar ao carrinho</button>
+        `;
+        produtosDiv.appendChild(produtoDiv);
+    });
+}
+
+    // Adiciona eventos de clique aos botões
+    const categoriaBtns = document.querySelectorAll('.categoria-btn');
+    categoriaBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tipo = btn.getAttribute('tipo-categoria');
+            exibirProdutos(tipo);
+        });
+    });
+
+    // Exibir a categoria "Todos" por padrão quando a página carrega
+    window.onload = function() {
+        exibirProdutos('todos'); // Exibe todos os produtos ao carregar a página
+    };
+    </script>
+
+    </html>

@@ -26,6 +26,12 @@ html, body, footer{ /* Apaga todas as margens */ margin: 0;
     color: #F2ADA7; 
 }
 
+.menu-item-atual {
+    color: #F2ADA7; 
+    text-decoration: none;
+    margin-right: 30px; 
+  }
+
 .alinhamento-geral{ /*Para alinhas os blocos lado a lado*/
     display: flex;
     justify-content: space-between;

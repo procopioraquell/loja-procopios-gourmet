@@ -15,8 +15,8 @@
 .menu{ /* Config. da barra de navegação */ 
     background-color: #4F1D0E;
     text-align: center;
-    padding: 1px 2px;
-    font-size: 25px;
+    padding: 1px;
+    font-size: 20px;
   
   }
   .menu-item {
@@ -26,62 +26,101 @@
   }
   
   .menu-item:hover {
+    color: #f2d2cf; 
+  }
+  .menu-item-atual {
     color: #F2ADA7; 
-  }
-      
-  /* ESTILIZAÇÃO DA LOJA */
-  
-  .titulo{
-    padding: 15px; /*Tamanho do bloco */
-    font-family: "Playfair Display";
-    text-align: center;
-    font-size: 40px;
-    font-style: normal;/* Espessura da fonte */ 
-    font-weight: 100;
-    color: #4F1D0E;
-    margin-top: 1px; /* Margem superior */
-    margin-bottom: 5px; /* Margem inferior */
+    text-decoration: none;
+    margin-right: 30px; 
   }
   
+
+/* Botões de Categoria */
+.selecao_loja {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 20px;
+  text-align: center;
+}
+.categoria{
+  position: relative;
+}
+
+.categoria-btn{
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #4F1D0E;
+  background-color: transparent;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;  
+  
+}
+.categoria-btn img {
+  max-width: 100%; 
+  height: auto;
+  
+}
+.categoria-btn p {
+  margin-top: -5px; 
+  text-align: center; /* Centraliza o texto */
+  color: #0C5700;
+}
+
+.linha-divisao {
+  height: 2px; /* Altura da linha */
+  background-color: #4F1D0E; /* Cor da linha */
+  margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+  width: 100%; /* Largura da linha */
+}
+
+.produtos-filtrados {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center; 
+  width: 80%; 
+  margin: 0 auto; 
+}
+.mensagem-bem-vindo {
+  text-align: center;
+  margin: 20px 0;
+  color: #4F1D0E; /* Cor do texto */
+}
+
+.mensagem-bem-vindo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px; /* Bordas arredondadas para a imagem */
+}
+
+/*CARDAPIO*/
   .cardapio {
-    width: 80%;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-family: "Cinzel";
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Cinzel";
   }
-    
-  .cardapio-tortas {
-    background-color: #F2ADA7;
+  .cardapio-itens {
+    background-color: #81231a;
     border-radius: 5px; /*Arredonda as bordas*/
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*sombra*/
     margin: 10px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     width: 300px;
   }
     
-  .cardapio-tortas img {
+  .cardapio-itens img {
     max-width: 100%;
     border-radius: 7px
   }
   
-  /* DOCES */
-  .cardapio-doces {
-    background-color: #F2ADA7;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 300px;
-  }
-  
-  .cardapio-doces img {
-    max-width: 100%;
-    border-radius: 5px
-  }
   
   /* CONFIG. BOTÕES */
   button{

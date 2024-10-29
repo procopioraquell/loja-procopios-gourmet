@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Procopios Gourmet</title>
     <meta name="description" content="Confeitaria com bolos de festas, doces em geral em Duque de Caxias.">
-    <link rel="stylesheet" href="style-principal.css">
+    <link rel="stylesheet" href="style-index.css">
 </head>
 
 <header>
@@ -28,23 +28,56 @@
     <section> <!--CTA COM EMOJI-->
         <h2 class="cta"> <span> &#129473;</span> COM A PROCOPIOS A SUA VIDA TEM MAIS SABOR <span> &#129473;</span> </h2> 
     </section>
-
+    
 <!--BOTOES DE DIRECIONAMENTO-->
     <div class="direcionamento"; style="text-align: center;"> 
         <form action="loja.html" method="get">
         <button type="submit" class="loja1" >IR PARA A LOJA ➡︎</button> </form>
 
         <form action="contato.html" method="get">
-        <button type="submit" class="contato1"> FALE CONOSCO     ➡︎ </button>  </form>
+        <button type="submit" class="contato1"> NOSSOS CONTATOS ➡︎ </button>  </form>
     </div>     
 </body>
 
 <footer> <!--RODAPÉ-->
     <div class="logo">
-        <img src="imagens/LOGO _ RODAPE.png". width="100px">
+        <img src="imagens/index/LOGO _ RODAPE.png". width="100px">
       </div>
     <div class="address">Duque de Caxias, Rio de Janeiro - RJ, 24544-365 <br>            
         Estimativa de grandes entregas em 2 dias úteis.<br>            
         Retirada em estoque de até 30 minutos.</h5>
 </footer>
+
+<script src="produtos.js"></script>
+    
+<script>
+    const cardapioDiv = document.getElementById('cardapio');
+    
+    // Função para exibir os produtos
+    function exibirProdutos(tipo) {
+        cardapioDiv.innerHTML = ''; // Limpa os produtos exibidos
+        const produtosFiltrados = produtos.filter(produto => produto.tipo === tipo);
+
+        produtosFiltrados.forEach(produto => {
+            const produtoDiv = document.createElement('div');
+            produtoDiv.classList.add('cardapio-itens');
+            produtoDiv.innerHTML = `
+                <img src="${produto.imagem}" width="200px">
+                <h2>${produto.nome}</h2>
+                <p>R$ ${produto.preco.toFixed(2)}</p>
+                <button>Adicionar ao carrinho</button>
+            `;
+            cardapioDiv.appendChild(produtoDiv);
+        });
+    }
+
+    // Adiciona eventos de clique aos botões
+    const categoriaBtns = document.querySelectorAll('.categoria-btn');
+    categoriaBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tipo = btn.getAttribute('tipo-categoria');
+            exibirProdutos(tipo);
+        });
+    });
+</script>
 </html>

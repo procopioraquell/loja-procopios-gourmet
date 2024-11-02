@@ -1,47 +1,59 @@
 @font-face {
   font-family: "Playfair Display";
   src: url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+}
+
+@font-face {
   font-family: "Cinzel";
   src: url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
-  font-family: "Chelsea Maket";
+}
+
+@font-face {
+  font-family: "Chelsea Market";
   src: url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Cinzel:wght@400..900&display=swap");
 }
 
-html,
-body,
-footer {
-  /* Apaga todas as margens */
-  margin: 0;
-}
+@font-face {
+  font-family: 'Avenir Light';
+  src: url('fonts/avenir-light.woff2') format('woff2'),
+       url('fonts/avenir-light.woff') format('woff'),
+       url('fonts/avenir-light.ttf') format('truetype');}
+
+
+html,body, footer {margin: 0;}
+
+ /* Config. da barra de navegação */
 .menu {
-  /* Config. da barra de navegação */
+ 
   background-color: #4f1d0e;
   text-align: center;
   padding: 1px 2px;
   font-size: 20px;
+  margin-top: 3px;
+  margin-bottom: 1px;
+
 }
 .menu-item {
   color: white;
-  text-decoration: none; /* Remove a linha do hiperlink */
-  margin-right: 30px; /* Espaço entre os itens */
+  text-decoration: none; 
+  margin-right: 30px; 
 }
-
 .menu-item:hover {
-  color: #f2ada7; /* Mudar cor do texto ao passar o mouse */
+  color: #f2ada7; 
 }
 
 /* CONFIG. DA PRINCIPAL */
 .principal {
-  padding: 100px; /*Defini o tamanho do bloco */
-  background-image: url(imagens/index/PRINCIPAL1.png); /*imagem de fundo */
-  background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a área */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Evita repetição da imagem */
-  opacity: 0.8;
+  padding: 100px; 
+  background-image: url(imagens/index/PRINCIPAL1.png);
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  opacity: 0.9;
 }
 
+/* BANNER PRINCIPAL - INICIO */
 .principal-titulo {
-  /* LOGO */
   font-family: "Playfair Display", "Times New Roman", Times, serif;
   font-size: 5rem;
   color: #fdf3e7;
@@ -55,87 +67,169 @@ footer {
   color: white;
 }
 
-/* CONFIG. DA CTA */
-
+/* CONFIG. DA CTA  FRASE CENTRAL */
 .cta {
-  background-color: #591e11;
-  padding: 15px; /*Tamanho do bloco */
+  background-color: #4F1D0E;
   text-align: center;
+  padding: 20px;
+  border-top: 5px solid #fdf3e7; 
+  border-left: 5px solid #fdf3e7; 
+}
+
+.cta-texto{
   font-size: 20px;
   font-family: "Cinzel", serif;
-  font-style: normal; /* Espessura da fonte */
+  font-style: normal; 
   font-weight: 100;
   color: #ffe2d0;
-  margin-top: 5px; /* Margem superior */
-  margin-bottom: 5px; /* Margem inferior */
+  margin-top: 5px; 
+  margin-bottom: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+ /* Icone de cupcake */
+.cupcake1 { 
+ 
+  width: 50px;
+  height: auto;
+  margin-left: 260px;
+}
+
+.cupcake2 {
+  width: 50px;
+  height: auto;
+  margin-right: 260px;
 }
 
 
 /* ESTILIZAÇÃO DA LOJA */
   
 .titulo{
-  padding: 15px; /*Tamanho do bloco */
+  padding: 15px; 
   font-family: "Playfair Display";
   text-align: center;
   font-size: 40px;
-  font-style: normal;/* Espessura da fonte */ 
+  font-style: normal;
   font-weight: 100;
   color: #4F1D0E;
-  margin-top: 1px; /* Margem superior */
-  margin-bottom: 5px; /* Margem inferior */
+  margin-top: 1px; 
+  margin-bottom: 5px; 
 }
 
 
 /*BOTOES DE DIRECIONAMENTO */
 .direcionamento {
-  padding: 10px; /*Defini o tamanho do bloco */
+  padding: 10px; 
   background-color: #ffe2d0;
   font-size: 30px;
   text-align: center;
-  margin-top: 5px; /* Margem superior */
-  margin-bottom: 5px; /* Margem inferior */
+  margin-top: 5px; 
+  margin-bottom: 5px; 
 }
 
 .loja1 {
-  background-color: #f2ada7; /* Cor de fundo */
-  border: none; /* Remover borda */
-  color: white; /* Cor do texto */
-  padding: 30px 70px; /* Espaçamento interno */
-  text-align: center; /* Alinhamento do texto */
-  text-decoration: none; /* Remover sublinhado */
-  display: inline-block; /* Exibir como bloco */
-  font-size: 30px; /* Tamanho da fonte */
-  margin: 20px; /* Margem externa */
-  cursor: pointer; /* Cursor */
-  border-radius: 30px; /* Borda arredondada */
+  background-color: #f2ada7; 
+  border: none; 
+  color: white; 
+  padding: 30px 70px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 30px; 
+  margin: 20px; 
+  cursor: pointer; 
+  border-radius: 30px; 
   font-family: "Chelsea Maket";
 }
 
 .loja1:hover {
-  /* Mudar cor ao passar o mouse */
   background-color: #0c5700;
   color: white;
 }
 .contato1 {
-  background-color: #591e11; /* Cor de fundo */
-  border: none; /* Remover borda */
-  color: white; /* Cor do texto */
-  padding: 30px 50px; /* Espaçamento interno */
-  text-align: center; /* Alinhamento do texto */
-  text-decoration: none; /* Remover sublinhado */
-  display: inline-block; /* Exibir como bloco */
-  font-size: 30px; /* Tamanho da fonte */
-  margin: 20px; /* Margem externa */
-  cursor: pointer; /* Cursor */
-  border-radius: 30px; /* Borda arredondada */
+  background-color: #591e11; 
+  border: none; 
+  color: white; 
+  padding: 30px 50px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block;
+  font-size: 30px; 
+  margin: 20px; 
+  cursor: pointer; 
+  border-radius: 30px; 
   font-family: "Chelsea Maket";
 }
 
 .contato1:hover {
-  /* Mudar cor ao passar o mouse */
   background-color: #0c5700;
   color: white;
 }
+
+
+/*SOBRE */
+.sobre-principal {
+  background-color: #FDF3E7;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px; 
+  padding-left: 100px; 
+  box-sizing: border-box;
+  flex-wrap: wrap; 
+
+}
+.sobre-logo, .sobre-text {
+  flex: 1; 
+  min-width: 250px; 
+  margin: 10px;
+}
+.sobre-logo img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 3%;
+  margin-right: 20px;
+}
+
+.sobre-text {
+  text-align: center;
+  margin-left: 20px;
+}
+.sobre-text h1 {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal; 
+  color: #4F1D0E;
+  margin: 0;
+}
+
+.sobre-text h2 {
+  font-size: 17px;
+  font-family: "Cinzel", serif;
+  font-style: normal; 
+  font-weight: 100;
+  color: #591e11;
+  margin: 0 0 10px 0;
+}
+
+.sobre-text p {
+  text-align: justify;
+  font-size: 15px;
+  font-family: "Cinzel", serif; 
+  font-weight: 100;
+  color: #756F63;
+  max-width: 400px
+  
+}
+
+
+
+
 
 /* Estilo para o rodapé */
 footer {

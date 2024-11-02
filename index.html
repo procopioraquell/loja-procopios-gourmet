@@ -3,31 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Procopios Gourmet</title>
-    <meta name="description" content="Confeitaria com bolos de festas, doces em geral em Duque de Caxias.">
+    <title>Procopios Gourmet - Confeitaria </title>
+    <meta name="description" content="Procopios Gourmet oferece uma seleção de bolos de festas, tortas, doces em geral, feitos com os melhores ingredientes e em Duque de Caxias.">
+    <link rel="canonical" href="https://www.procopiosgourmet.com.br/">
     <link rel="stylesheet" href="style-index.css">
 </head>
+<body> 
+
 
 <header>
     <nav class="menu"> <!-- BARRA DE NAVEGAÇÃO -->
         <ul>
             <a class="menu-item" href="index.html"> Inicio </a>
             <a class="menu-item"href="loja.html"> Loja </a>
+            <a class="menu-item" href="#sobre"> Sobre </a>
             <a class="menu-item" href="contato.html"> Contato </a>
         </ul>
     </nav>
 </header>
-    
-<body> <!--CONTEUDO PRINCIPAL-->
+
+<main> <!--CONTEUDO PRINCIPAL-->
     <div class="principal"; style="text-align: center;"> <!--Centraliza todos os itens de pirncipal-->
         <h1 class="principal-titulo"> PROCOPIOS GOURMET</h1>
         <P class="principal-legenda"> - Loja de bolos, doces e sobremesas - </P> <br>
     </div>
 
     
-    <section> <!--CTA COM EMOJI-->
-        <h2 class="cta"> <span> &#129473;</span> COM A PROCOPIOS A SUA VIDA TEM MAIS SABOR <span> &#129473;</span> </h2> 
-    </section>
+    <section class="cta">
+        <div class="container">
+          <img src="imagens/index/cupcakee.png" alt="mini cupcake" class="cupcake1">
+          <h5 class="cta-texto">COM A PROCOPIOS A SUA VIDA TEM MAIS SABOR</h5>
+          <img src="imagens/index/cupcakee.png" alt="mini cupcake" class="cupcake2">
+        </div>
+      </section>
     
 <!--BOTOES DE DIRECIONAMENTO-->
     <div class="direcionamento"; style="text-align: center;"> 
@@ -39,6 +47,21 @@
     </div>     
 </body>
 
+<!--SOBRE-->
+    <section class="sobre-principal" id="sobre-principal">
+        <div class="sobre-logo">
+            <img src="imagens/index/Sobre.png"  alt="Logo da Rouge Gourmet" >  
+        </div>
+        <div class="sobre-text">
+            <h1>SOBRE</h1> 
+            <h2>Procopios Gourmet</h2> 
+            <p> A Procopios Gourmet foi fundada em Dezembro de 2021 por Raquel Procopio dos Santos. Aos 21 anos, a jovem apaixonada por criatividade e inovação, decidiu estudar a modalidade de negócios online, conhecida como "E-corrmmerce", onde seria necessário criar um projeto pessoal de conclusão para o curso, mas a cada layout inserido a mesma se questionava: "Porque não trazer este negócio para a vida real?". A empresa iniciou suas atividades em setembro de 2022, com vendas online e um ponto de vendas físico.</p>
+
+            <p> Estamos em constante inovação e em busca de melhores experiências para seus clientes e colaboradores. A mesma está sediada em Campos Elíseos, bairro situado em Duque de Caxias, Rio de Janeiro e conta com uma equipe de 5 pessoas, sendo eles os colaboradores de produção, gestão e vendas</p>
+            </div>
+    </section>
+    </div>
+
 <footer> <!--RODAPÉ-->
     <div class="logo">
         <img src="imagens/index/LOGO _ RODAPE.png". width="100px">
@@ -47,37 +70,5 @@
         Estimativa de grandes entregas em 2 dias úteis.<br>            
         Retirada em estoque de até 30 minutos.</h5>
 </footer>
-
-<script src="produtos.js"></script>
-    
-<script>
-    const cardapioDiv = document.getElementById('cardapio');
-    
-    // Função para exibir os produtos
-    function exibirProdutos(tipo) {
-        cardapioDiv.innerHTML = ''; // Limpa os produtos exibidos
-        const produtosFiltrados = produtos.filter(produto => produto.tipo === tipo);
-
-        produtosFiltrados.forEach(produto => {
-            const produtoDiv = document.createElement('div');
-            produtoDiv.classList.add('cardapio-itens');
-            produtoDiv.innerHTML = `
-                <img src="${produto.imagem}" width="200px">
-                <h2>${produto.nome}</h2>
-                <p>R$ ${produto.preco.toFixed(2)}</p>
-                <button>Adicionar ao carrinho</button>
-            `;
-            cardapioDiv.appendChild(produtoDiv);
-        });
-    }
-
-    // Adiciona eventos de clique aos botões
-    const categoriaBtns = document.querySelectorAll('.categoria-btn');
-    categoriaBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const tipo = btn.getAttribute('tipo-categoria');
-            exibirProdutos(tipo);
-        });
-    });
-</script>
+</main>
 </html>

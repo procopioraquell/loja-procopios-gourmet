@@ -85,18 +85,12 @@
   width: 80%; 
   margin: 0 auto; 
 }
-.mensagem-bem-vindo {
+.mensagem-instrucao {
   text-align: center;
+  font-size: 25px;
   margin: 20px 0;
-  color: #4F1D0E; /* Cor do texto */
+  color: #4F1D0E; 
 }
-
-.mensagem-bem-vindo img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px; /* Bordas arredondadas para a imagem */
-}
-
 /*CARDAPIO*/
   .cardapio {
   width: 100%;
